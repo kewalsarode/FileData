@@ -55,7 +55,7 @@ namespace FileData.Test
             var fileProcessor = new Mock<IFileSizeProcessor>();
 
 
-            Assert.Throws<ArgumentException>(fileProcessor.Object.GetSize(indicator, "C:/test.txt"));
+            Assert.Throws<ArgumentException>(()=>fileProcessor.Object.GetSize(indicator, "C:/test.txt"));
         }
     }
 }
